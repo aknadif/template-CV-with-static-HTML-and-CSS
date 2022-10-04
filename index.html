@@ -7,9 +7,9 @@
     <title>CV</title>
     <style>
       body {
+        display: inline-block;
         position: relative;
         padding: 8rem;
-        max-width: 100%;
         font-family: Arial, Helvetica, sans-serif;
       }
       .header {
@@ -86,37 +86,39 @@
       .container__grid {
         position: relative;
         margin-top: 40px;
-        width: 100%;
       }
       .vl {
         display: block;
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 50%;
+        left: 45%;
         border-left: 3px solid rgb(128, 128, 128);
         height: 1700px;
       }
       .left__page {
         padding-right: 40px;
-        max-width: 600px;
       }
       .right__page {
         position: absolute;
         top: 0;
-        left: 55%;
+        left: 50%;
       }
       .we__page {
-        width: 700px;
+        width: 100%;
         position: absolute;
         top: 0;
         left: 0px;
       }
+      .we__page hr {
+        margin-left: 0;
+        width: 40%;
+      }
       .we__content {
-        max-width: 700px;
+        max-width: 70%;
       }
       .project__content {
-        width: 650px;
+        width: 100%;
         text-align: center;
       }
       .project__content img {
@@ -156,6 +158,7 @@
       .we__desc {
         text-align: justify;
         line-height: 2rem;
+        width: 60%;
       }
 
       .education__content {
@@ -230,68 +233,7 @@
       .skills__name {
         font-size: 1.4rem;
       }
-      .skills__bar {
-        position: absolute;
-        top: 10px;
-        left: 240px;
-      }
-      .skills__bar.msoff {
-        top: 50px;
-      }
-      .skills__bar.vc {
-        top: 100px;
-      }
-      .skills__bar.netw {
-        top: 150px;
-      }
-      .skills__bar.email {
-        top: 200px;
-      }
-      .skills__bar.datasof {
-        top: 250px;
-      }
-      .skills__bar.dime {
-        top: 300px;
-      }
-      .skills__bar.accsoft {
-        top: 350px;
-      }
-      .skillinse {
-        width: 80%;
-        background-color: black;
-      }
-      .skillmsoff {
-        width: 90%;
-        background-color: black;
-      }
-      .skillvc {
-        width: 70%;
-        background-color: black;
-      }
-      .skillnetw {
-        width: 40%;
-        background-color: black;
-      }
-      .skillemail {
-        width: 80%;
-        background-color: black;
-      }
-      .skilldatasof {
-        width: 60%;
-        background-color: black;
-      }
-      .skilldime {
-        width: 50%;
-        background-color: black;
-      }
-      .skillaccsoft {
-        width: 70%;
-        background-color: black;
-      }
-      .skills__bar {
-        width: 60%;
-        background-color: #ddd;
-      }
+
       .skills__in {
         text-align: right;
         padding-top: 5px;
@@ -327,6 +269,7 @@
       }
       .stack {
         height: 350px;
+        width: 50%;
       }
       .stack__wrap {
         display: inline-block;
