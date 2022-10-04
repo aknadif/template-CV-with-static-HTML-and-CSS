@@ -71,6 +71,9 @@
         font-size: 2rem;
         letter-spacing: 4px;
       }
+      .skills__head {
+        width: 100%;
+      }
       .profile__body {
         font-size: 1.2rem;
         line-height: 2.5rem;
@@ -87,35 +90,29 @@
         position: relative;
         margin-top: 40px;
       }
-      .vl {
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
+      .vertical--line {
+        margin-left: 5%;
+        display: inline-block;
         border-left: 3px solid rgb(128, 128, 128);
         height: 1800px;
       }
       .left__page {
-        padding-right: 40px;
+        width: 45%;
+        display: inline-block;
+        left: 0;
       }
       .right__page {
-        position: absolute;
-        top: 0;
-        left: 55%;
-      }
-      .we__page {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0px;
+        margin-left: 4%;
+        width: 45%;
+        display: inline-block;
+        right: 0;
       }
       .we__page hr {
         margin-left: 0;
-        width: 45%;
+        width: 100%;
       }
       .we__content {
-        max-width: 75%;
+        max-width: 100%;
       }
       .project__content {
         width: 100%;
@@ -158,10 +155,11 @@
       .we__desc {
         text-align: justify;
         line-height: 2rem;
-        width: 60%;
+        width: 100%;
       }
 
       .education__content {
+        width: 100%;
         height: 300px;
       }
       .education__wrap {
@@ -269,7 +267,7 @@
       }
       .stack {
         height: 350px;
-        width: 50%;
+        width: 100%;
       }
       .stack__wrap {
         display: inline-block;
@@ -550,7 +548,6 @@
 
     <div class="container__grid">
       <div class="left__page">
-        <div class="spacer"></div>
         <div class="we__page">
           <div class="we__content">
             <div class="we__jobtitle">
@@ -796,7 +793,7 @@
           </div>
         </div>
       </div>
-      <div class="middle__page"><div class="vl"></div></div>
+      <div class="vertical--line"></div>
       <div class="right__page">
         <div class="project__content">
           <img src="https://accurate.id/wp-content/uploads/2021/03/accurate.id-Project-Management-adalah-Aspek-Tahapan-dan-Tujuannya.jpg" alt="" />
