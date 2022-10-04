@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <style>
+      body {
+        padding: 15rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header {
+        position: relative;
+        height: 250px;
+      }
+      .header__caption {
+        position: absolute;
+        left: auto;
+        margin-bottom: 2rem;
+        max-height: 200px;
+      }
+      .header__caption h1 {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        font-size: 5rem;
+        font-weight: bold;
+      }
+      .header__caption h4 {
+        letter-spacing: 8px;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: lighter;
+      }
+      .header__caption p {
+        margin-top: 2rem;
+        font-size: 18px;
+      }
+      .header__contact {
+        position: relative;
+      }
+      .header__contact span svg {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+      .header__contact span span {
+        margin-left: 0.2rem;
+      }
+      .header__image {
+        position: absolute;
+        right: 0;
+      }
+      .header__image img {
+        object-fit: cover;
+        object-position: 90% 00%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+      .profile {
+        padding: 1.2rem 0;
+      }
+      .profile__head h2,
+      .education__head h2,
+      .we__head h2,
+      .skills__head {
+        font-size: 2rem;
+        letter-spacing: 4px;
+      }
+      .profile__body {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+      }
+      .head__container {
+        position: relative;
+      }
+      .we__head {
+        position: absolute;
+        left: 850px;
+        top: -26px;
+      }
+      .container__grid {
+        position: relative;
+        margin-top: 40px;
+        /* display: grid;
+        grid-template-columns: 800px 50px auto;  */
+      }
+      .vl {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        border-left: 3px solid rgb(128, 128, 128);
+        height: 1100px;
+      }
+      .left__page {
+        padding-right: 40px;
+        max-width: 750px;
+      }
+      .right__page {
+        position: absolute;
+        top: 0;
+        left: 850px;
+      }
+      .we__content {
+        max-width: 800px;
+      }
+      .we--space {
+        margin-top: 80px;
+      }
+      .we__year {
+        color: grey;
+        font-weight: bold;
+      }
+      .we__jobtitle {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .we__jobtitle h5 {
+        margin: 0;
+      }
+      .we__companyname {
+        margin-top: -10px;
+      }
+      .we__desc {
+        text-align: justify;
+        line-height: 2rem;
+      }
+      .education__content {
+        height: 300px;
+      }
+      .education__wrap {
+        position: relative;
+        align-items: unset;
+        line-height: 1rem;
+        margin-bottom: 50px;
+      }
+      .education__box {
+        width: 100px;
+        height: 50px;
+        background: black;
+        text-align: center;
+        color: #fff;
+        font-size: 13px;
+        position: relative;
+        display: table;
+      }
+
+      .education__box span {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .education__box:before,
+      .education__box:after {
+        content: "";
+        position: absolute;
+      }
+
+      .education__box:after {
+        border-left: 25px solid black;
+        border-right: 25px solid transparent;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        right: -50px;
+        top: 0px;
+        width: 0;
+        height: 0;
+        display: block;
+      }
+      .education__desc {
+        position: absolute;
+        top: 0;
+        left: 100px;
+        margin-left: 50px;
+        margin-top: 5px;
+      }
+      .education__name {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .education__name h5 {
+        margin: 0;
+      }
+      .education--space {
+        margin-top: 30px;
+      }
+      .skills__content {
+        position: relative;
+        height: 425px;
+      }
+      .skills__bar {
+        position: absolute;
+        left: 0;
+      }
+      .skills__name {
+        font-size: 1.4rem;
+      }
+      .skills__bar {
+        position: absolute;
+        top: 10px;
+        left: 240px;
+      }
+      .skills__bar.msoff {
+        top: 50px;
+      }
+      .skills__bar.vc {
+        top: 100px;
+      }
+      .skills__bar.netw {
+        top: 150px;
+      }
+      .skills__bar.email {
+        top: 200px;
+      }
+      .skills__bar.datasof {
+        top: 250px;
+      }
+      .skills__bar.dime {
+        top: 300px;
+      }
+      .skills__bar.accsoft {
+        top: 350px;
+      }
+      .skillinse {
+        width: 80%;
+        background-color: black;
+      }
+      .skillmsoff {
+        width: 90%;
+        background-color: black;
+      }
+      .skillvc {
+        width: 70%;
+        background-color: black;
+      }
+      .skillnetw {
+        width: 40%;
+        background-color: black;
+      }
+      .skillemail {
+        width: 80%;
+        background-color: black;
+      }
+      .skilldatasof {
+        width: 60%;
+        background-color: black;
+      }
+      .skilldime {
+        width: 50%;
+        background-color: black;
+      }
+      .skillaccsoft {
+        width: 70%;
+        background-color: black;
+      }
+      .skills__bar {
+        width: 60%;
+        background-color: #ddd;
+      }
+      .skills__in {
+        text-align: right;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: white;
+      }
+      .hoby {
+        font-size: 1.5rem;
+        position: relative;
+        margin-top: 20px;
+      }
+      .hoby__wrap {
+        margin-left: 80px;
+        position: absolute;
+        top: 0;
+      }
+      .hoby-2 {
+        left: 120px;
+      }
+      .hoby-3 {
+        left: 240px;
+      }
+      .hoby-4 {
+        left: 360px;
+      }
+      .hoby-5 {
+        left: 480px;
+      }
+      .hoby__img svg {
+        width: 80px;
+        height: 80px;
+      }
+      .hoby__text {
+        margin-top: 10px;
+        text-align: center;
+      }
+      .hoby__text p {
+        margin: 0;
+      }
+      .skillis {
+        width: 80%;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__caption">
+        <h1>Emma Madison</h1>
+        <h4>SOFTWARE ENGINEER</h4>
+        <p>1234 street name, town/city, state/country, post/zip 012345</p>
+        <div class="header__contact">
+          <span
+            ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+            <span>+23576928</span>
+          </span>
+          <span>|</span>
+          <span
+            ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span> example@gmail.com </span>
+          </span>
+          <span>|</span>
+          <span
+            ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span> www.example.com </span>
+          </span>
+        </div>
+      </div>
+      <div class="header__image"><img src="https://img.freepik.com/premium-photo/portrait-young-asian-business-woman-pointing-up-white-background_34168-713.jpg?w=2000" alt="" srcset="" /></div>
+    </div>
+    <hr />
+    <div class="profile">
+      <div class="profile__head">
+        <h2>PROFILE</h2>
+      </div>
+      <div class="profile__body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nobis velit, soluta accusantium cum perferendis nostrum dolor impedit officia corporis earum distinctio nam perspiciatis. Fugit labore sit nesciunt facilis, vero
+          voluptatum deleniti reprehenderit, nostrum cupiditate aliquam enim, aliquid necessitatibus quae assumenda nisi totam ipsum reiciendis beatae ducimus quod earum temporibus.
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="head__container">
+      <div class="education__head">
+        <h2>EDUCATION</h2>
+      </div>
+      <div class="we__head">
+        <h2>WORK EXPERIENCE</h2>
+      </div>
+    </div>
+    <hr />
+
+    <div class="container__grid">
+      <div class="left__page">
+        <div class="education__content">
+          <div class="education__wrap">
+            <div class="education__box">
+              <span>2014</span>
+            </div>
+            <div class="education__desc">
+              <div class="education__name">
+                <h5>Enter College / University Name</h5>
+              </div>
+              <div class="education__degree">
+                <p>Enter Your Degree Name</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="education__wrap education--space">
+            <div class="education__box">
+              <span>2014</span>
+            </div>
+            <div class="education__desc">
+              <div class="education__name">
+                <h5>Enter College / University Name</h5>
+              </div>
+              <div class="education__degree">
+                <p>Enter Your Degree Name</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="education__wrap education--space">
+            <div class="education__box">
+              <span>2014</span>
+            </div>
+            <div class="education__desc">
+              <div class="education__name">
+                <h5>Enter College / University Name</h5>
+              </div>
+              <div class="education__degree">
+                <p>Enter Your Degree Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <div class="skills">
+          <div class="skills__head">
+            <h2>SKILLS</h2>
+          </div>
+        </div>
+        <hr />
+        <div class="skills__content">
+          <div class="skill__wraps">
+            <div class="skills__name">
+              <p>Information Security</p>
+            </div>
+
+            <div class="skills__name">
+              <p>Microsoft Office</p>
+            </div>
+
+            <div class="skills__name">
+              <p>Video Creation</p>
+            </div>
+
+            <div class="skills__name">
+              <p>Networking</p>
+            </div>
+
+            <div class="skills__name">
+              <p>Email</p>
+            </div>
+
+            <div class="skills__name">
+              <p>Database Software</p>
+            </div>
+
+            <div class="skills__name">
+              <p>Digital Media</p>
+            </div>
+
+            <div class="skills__name">
+              <p>Accounting Software</p>
+            </div>
+          </div>
+          <div class="skill__bar inse">
+            <div class="skills__bar">
+              <div class="skills__in skillinse"></div>
+            </div>
+            <div class="skills__bar msoff">
+              <div class="skills__in skillmsoff"></div>
+            </div>
+            <div class="skills__bar vc">
+              <div class="skills__in skillvc"></div>
+            </div>
+            <div class="skills__bar netw">
+              <div class="skills__in skillnetw"></div>
+            </div>
+            <div class="skills__bar email">
+              <div class="skills__in skillemail"></div>
+            </div>
+            <div class="skills__bar datasof">
+              <div class="skills__in skilldatasof"></div>
+            </div>
+            <div class="skills__bar dime">
+              <div class="skills__in skilldime"></div>
+            </div>
+            <div class="skills__bar accsoft">
+              <div class="skills__in skillaccsoft"></div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="hoby">
+          <div class="hoby__wrap hoby-1">
+            <div class="hoby__img">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm0-96c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zM288 96c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm96 96c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32z"
+                />
+              </svg>
+            </div>
+            <div class="hoby__text"><p>Painting</p></div>
+          </div>
+
+          <div class="hoby__wrap hoby-2">
+            <div class="hoby__img">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"
+                />
+              </svg>
+            </div>
+            <div class="hoby__text"><p>Music</p></div>
+          </div>
+
+          <div class="hoby__wrap hoby-3">
+            <div class="hoby__img">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+              </svg>
+            </div>
+            <div class="hoby__text"><p>Video</p></div>
+          </div>
+
+          <div class="hoby__wrap hoby-4">
+            <div class="hoby__img">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M180.5 141.5C219.7 108.5 272.6 80 336 80s116.3 28.5 155.5 61.5c39.1 33 66.9 72.4 81 99.8c4.7 9.2 4.7 20.1 0 29.3c-14.1 27.4-41.9 66.8-81 99.8C452.3 403.5 399.4 432 336 432s-116.3-28.5-155.5-61.5c-16.2-13.7-30.5-28.5-42.7-43.1L48.1 379.6c-12.5 7.3-28.4 5.3-38.7-4.9S-3 348.7 4.2 336.1L50 256 4.2 175.9c-7.2-12.6-5-28.4 5.3-38.6s26.1-12.2 38.7-4.9l89.7 52.3c12.2-14.6 26.5-29.4 42.7-43.1zM448 256c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z"
+                />
+              </svg>
+            </div>
+            <div class="hoby__text"><p>Fishing</p></div>
+          </div>
+
+          <div class="hoby__wrap hoby-5">
+            <div class="hoby__img">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M309.5 178.4L447.9 297.1c-1.6 .9-3.2 2-4.8 3c-18 12.4-40.1 20.3-59.2 20.3c-19.6 0-40.8-7.7-59.2-20.3c-22.1-15.5-51.6-15.5-73.7 0c-17.1 11.8-38 20.3-59.2 20.3c-10.1 0-21.1-2.2-31.9-6.2C163.1 193.2 262.2 96 384 96h64c17.7 0 32 14.3 32 32s-14.3 32-32 32H384c-26.9 0-52.3 6.6-74.5 18.4zM32 160c0-35.3 28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64zM306.5 325.9C329 341.4 356.5 352 384 352c26.9 0 55.4-10.8 77.4-26.1l0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 405.7 417 416 384 416c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.4 27.3-10.1 39.2-1.7l0 0C136.7 341.2 165.1 352 192 352c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0z"
+                />
+              </svg>
+            </div>
+            <div class="hoby__text"><p>Swimming</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="middle__page"><div class="vl"></div></div>
+      <div class="right__page">
+        <div class="we__content">
+          <div class="we__year">
+            <span>2012 - 2014</span>
+          </div>
+          <div class="we__jobtitle">
+            <h5>Enter Your Job Position / Title</h5>
+          </div>
+          <div class="we__companyname">
+            <p>Company Name</p>
+          </div>
+          <div class="we__desc">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit aliquid earum porro quia, deserunt repellendus dolores nobis at nemo suscipit cum quaerat atque molestiae perspiciatis magni molestias laudantium in incidunt?
+              Suscipit consequatur incidunt repudiandae dolore similique delectus quod ea voluptatibus, eos assumenda consequuntur at iste fugit. Eaque quisquam et atque recusandae provident, soluta ea porro quae nesciunt ipsam consectetur
+              voluptatum eveniet quaerat aperiam. Repudiandae odio, hic veritatis nesciunt nemo sint temporibus voluptatum natus inventore? Alias!
+            </p>
+          </div>
+        </div>
+
+        <div class="we__content we--space">
+          <div class="we__year">
+            <span>2012 - 2014</span>
+          </div>
+          <div class="we__jobtitle">
+            <h5>Enter Your Job Position / Title</h5>
+          </div>
+          <div class="we__companyname">
+            <p>Company Name</p>
+          </div>
+          <div class="we__desc">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit aliquid earum porro quia, deserunt repellendus dolores nobis at nemo suscipit cum quaerat atque molestiae perspiciatis magni molestias laudantium in incidunt?
+              Suscipit consequatur incidunt repudiandae dolore similique delectus quod ea voluptatibus, eos assumenda consequuntur at iste fugit. Eaque quisquam et atque recusandae provident, soluta ea porro quae nesciunt ipsam consectetur
+              voluptatum eveniet quaerat aperiam. Repudiandae odio, hic veritatis nesciunt nemo sint temporibus voluptatum natus inventore? Alias!
+            </p>
+          </div>
+        </div>
+
+        <div class="we__content we--space">
+          <div class="we__year">
+            <span>2012 - 2014</span>
+          </div>
+          <div class="we__jobtitle">
+            <h5>Enter Your Job Position / Title</h5>
+          </div>
+          <div class="we__companyname">
+            <p>Company Name</p>
+          </div>
+          <div class="we__desc">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit aliquid earum porro quia, deserunt repellendus dolores nobis at nemo suscipit cum quaerat atque molestiae perspiciatis magni molestias laudantium in incidunt?
+              Suscipit consequatur incidunt repudiandae dolore similique delectus quod ea voluptatibus, eos assumenda consequuntur at iste fugit. Eaque quisquam et atque recusandae provident, soluta ea porro quae nesciunt ipsam consectetur
+              voluptatum eveniet quaerat aperiam. Repudiandae odio, hic veritatis nesciunt nemo sint temporibus voluptatum natus inventore? Alias!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
